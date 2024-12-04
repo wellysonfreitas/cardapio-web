@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #232425;
+    --corPreta: #444444;
+    --corBege: #8F7E6E;
+    --corMarrom: #B58E52;
+    --corBranca: #fcfcfc;
+    --corCinza: #6c757d17;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background: var(--corBranca);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--corBranca);
+    padding: 1.5rem;
+}
+
+.header .navbar a {
+    color: var(--corBranca);
+    padding: 1rem .4rem;
+    background-color: var(--corMarrom);
+    border-radius: .5rem;
+}
+
+.header .navbar a:hover {
+    background-color: var(--corPreta);
+}
+
+.capa section img {
+    height: 600px;
+    width: 840px;
+}
+
+.nome-restaurante h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: var(--corCinza);
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+}
+
+.box-container .box {
+    padding: 2rem .5rem;
+}
+
+.box-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem 0;
+}
+
+.box-container .box span {
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.price {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.box-container .box a {
+    color: var(--corBege);
+}
+
+.box-container .box img {
+    cursor: pointer;
+    height: 8rem;
+    border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+    /*estilos responsivos*/
+  
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .box {
+        width: 100%;
+    }
+    .header {
+        padding: .8rem;
+    }
+
+    .header .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: .9rem;
+    }
+  
+    .capa section img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+  
+    .nome-restaurante h2 {
+        text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Estilos específicos para telas ainda menores */
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .box {
+         padding: 1rem;
+    }
+
+  }
+
+
